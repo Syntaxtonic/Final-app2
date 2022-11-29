@@ -4,12 +4,9 @@ const Bookings = db.bookings
 
 exports.create = (req, res) => {
   // Create
-  const bookings = new Bookings({
-    userId: req.userId,
-    Books: req.body.Books,
-  });
+  const id = req.params.id
 
-  console.log(bookings.userId)
+  
 
   bookings.save(bookings).then(data => {
         res.send(data)
