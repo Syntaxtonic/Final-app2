@@ -61,7 +61,7 @@ exports.signin = (req, res) => {
     res.status(500).send({ message: err });
     return;}
     if (!user) {
-    return res.status(404).send({ message: "User Not found." });
+    return res.status(404).send({ message: "You are not registered." });
         }
     var passwordIsValid = bcrypt.compareSync(
     req.body.password, user.password
@@ -81,4 +81,13 @@ exports.signin = (req, res) => {
         roles: authorities, accessToken: token});
     });
 };
+
+exports.signout = async (req, res) => {
+    try {
+        req.session = null;
+        return res.status(200).send({ message: "You've been signed out!"})
+    } catch (err) {
+        this.next(err)
+    }
+}
             

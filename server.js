@@ -69,7 +69,7 @@ require('./routes/book.routes')(app);
 require('./routes/posts.routes')(app);
 require('./routes/Booking.routes')(app)
 
-const PORT = process.env.PORT || 1011;
+const PORT = process.env.PORT || 8050;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);});
 
