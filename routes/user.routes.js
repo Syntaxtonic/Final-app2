@@ -18,9 +18,9 @@ module.exports = function(app) {
         [authJwt.verifyToken, authJwt.isAdmin], controller.adminBoard
     );
 
-    app.post('/api/booking/:id', [authJwt.verifyToken], controller.booking)
+    app.post('/api/books/:id', [authJwt.verifyToken], controller.booking)
 
-    app.get('/api/users/:id', controller.getUser)
+    app.get('/api/test/:id', controller.getUser)
 
     app.get('/api/users', controller.findAllUsers)
 };
