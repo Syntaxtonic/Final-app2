@@ -21,7 +21,12 @@ exports.booking = (req, res) => {
         .then(data => {
             if(!data.books.includes(id)){
                 data.updateOne({ $push: { books: id }})
-                    .then(() => res.status(200).send({ msg: "You have placed your booking for this book."}))
+                    .then(() => {
+                        res.status(200).send({ msg: "You have placed your booking for this book."})
+                    }).then(res => {
+                        console.log(res)
+                    })
+                    
                         .catch(err => res.status(500).send({ msg: err.message }))
             } else {
                 data.updateOne({ $pull: { books: id }})

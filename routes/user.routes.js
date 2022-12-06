@@ -20,7 +20,7 @@ module.exports = function(app) {
 
     app.post('/api/books/:id', [authJwt.verifyToken], controller.booking)
 
-    app.get('/api/test/:id', controller.getUser)
+    app.get('/api/users/:id', controller.getUser)
 
     app.get('/api/users', controller.findAllUsers)
 };
