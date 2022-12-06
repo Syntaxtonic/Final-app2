@@ -68,7 +68,7 @@ require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
 require('./routes/book.routes')(app);
 require('./routes/posts.routes')(app);
-require('./routes/Booking.routes')(app)
+// require('./routes/Booking.routes')(app)
 
 const PORT = process.env.PORT || 8050;
 app.listen(PORT, () => {
