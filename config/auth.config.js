@@ -1,3 +1,4 @@
+require('dotenv').config()
 module.exports = {
-    secret: "nolingo-secret-key"
+    secret:  process.env.SECRETE_KEY
 };
