@@ -1,2 +1,3 @@
 module.exports = {
-    secret: "nolingo-secret-key"};
+    secret: "nolingo-secret-key"
+};
