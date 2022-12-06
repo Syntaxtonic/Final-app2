@@ -6,8 +6,6 @@ exports.create = (req, res) => {
   // Create
   const id = req.params.id
 
-  
-
   bookings.save(bookings).then(data => {
         res.send(data)
     }).catch(err => {
