@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "npm i && nodemon server.js"
+    "start": "npm i && nodemon index.js"
   },
   "keywords": [],
   "author": "",
