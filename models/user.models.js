@@ -5,7 +5,7 @@ const User = mongoose.model("User", new mongoose.Schema({
     password: String,
     image: {
         type: String,
-        default: 'https://www.nicepng.com/png/detail/933-9332131_profile-picture-default-png.png'
+        default: 'https://i.postimg.cc/15S5NhS4/profile-removebg-preview.png'
     },
     roles: [{
         type: mongoose.Schema.Types.ObjectId,
