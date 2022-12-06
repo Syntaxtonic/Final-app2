@@ -12,6 +12,10 @@ module.exports = mongoose => {
         quantity:{
             type: Number,
             defaul: 1
+        },
+        status: {
+            type: Boolean,
+            default: false
         }
     }, {timestamps: true});
     products.method("toJSON", function() {
