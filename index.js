@@ -8,6 +8,7 @@ var corsOptions = {
     origin: "http://localhost:8081" 
 };
 
+console.log("Hello WOrld")
 app.use(cors());// parse requests of content-type - application/jsonapp.use(express.json());// parse requests of content-type -
 
 app.use(express.json())
