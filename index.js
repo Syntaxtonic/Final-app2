@@ -62,7 +62,7 @@ function initial() {
 
 
 app.get("/", (req, res) => {
-res.json({ message: "Welcome to Paul's Server you Dummy." });});// set port, listen for
+res.json({ message: "Welcome to Philippi Learning Pool Server." });});// set port, listen for
 
 require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
