@@ -63,7 +63,7 @@ exports.findAll = (req, res) => {
 
     var condition = title ? { title: {$regex: new RegExp(title), $options: "i"} } : {};
 
-    posts.find(condition)
+    Posts.find(condition)
         .then(data => {
             res.send(data);
         })

@@ -37,7 +37,7 @@ exports.booking = (req, res) => {
 }
 
 exports.getUser = (req, res) => {
-    const id = req.params.id
+     const id = req.params.id
 
     User.findById(id)
         .then(data => {
@@ -46,8 +46,13 @@ exports.getUser = (req, res) => {
         }).catch(err => res.status(500).send({ msg: err.message }))
 }
 
+
 exports.findAllUsers = (req, res) => {
-    User.find()
+    const books = req.query.books;
+
+    var condition = books ? { books: {$regex: new RegExp(books), $options: "i"} } : {};
+
+    User.find(condition)
         .then(data => res.status(200).send(data))
             .catch(err => res.status(500).send({ msg: err.message }))
 }
