@@ -9,7 +9,7 @@ var corsOptions = {
 };
 
 console.log("Hello WOrld")
-app.use(cors());// parse requests of content-type - application/jsonapp.use(express.json());// parse requests of content-type -
+app.use(cors(corsOptions));// parse requests of content-type - application/jsonapp.use(express.json());// parse requests of content-type -
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));// simple route
