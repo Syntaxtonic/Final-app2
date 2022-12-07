@@ -66,7 +66,7 @@ res.json({ message: "Welcome to Philippi Learning Pool Server." });});// set por
 
 require('./routes/auth.routes')(app);
 require('./routes/user.routes')(app);
-require('./routes/book.routes')(app);
+require('./routes/Book.routes')(app);
 require('./routes/posts.routes')(app);
 
 
